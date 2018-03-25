@@ -7,6 +7,11 @@
   <strong>Category: </strong>
   <%= board_game.category.name %>
 </p>
+<% if board_game.image.present? %>
+<P>
+  <%= image_tag board_game.image %>
+</P>
+  <% end %>
 <% if show_details_link %>
 <p>
   <%= link_to 'View Details', board_game %>
